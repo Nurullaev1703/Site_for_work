@@ -3,3 +3,42 @@
 @import 'colors';
 @import 'mixin';
 
+body{
+    background-color: $white;
+}
+h1,h2,h3{
+    @include font(900);
+}
+h1{
+    font-size: 45px;
+}
+h2{
+    font-size: 34px;
+}
+h3{
+    font-size: 25px;
+}
+h4{
+    @include font(700);
+    font-size: 20px;
+}
+p{
+    @include font(400);
+    font-size: 14px;
+}
+.btn{
+    @include btn($purple);
+
+    &:hover{
+        @include activeBtn($purple);
+    }
+
+    &.second{
+        @include btn($orange);
+
+        &:hover{
+            @include activeBtn($orange);
+        }
+    }
+
+}
